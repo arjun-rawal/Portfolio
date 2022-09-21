@@ -4,6 +4,8 @@
 <body>
     <div id="snow"></div>
 
+        <input checked id="snowOn"type="checkbox" onclick="toggleSnow()"style="position:absolute;right:2.5%;top:2.5%;transform: scale(2)">
+        <p style="position:absolute;right:4%;top:0.5%;letter-spacing: 1.5px;">Toggle Snow</p>
 
 
     <div id = "all" class = "tabcontent">
@@ -37,6 +39,20 @@
 
 
 <script>
+    function toggleSnow(){
+        var checkBox = document.getElementById("snowOn");
+        if (checkBox.checked == true){
+            document.getElementById("snow").style.display="block";
+        }
+        else{
+            document.getElementById("snow").style.display="none";
+        }
+
+
+    }
+
+
+
 document.addEventListener('DOMContentLoaded', function(){
     var script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
