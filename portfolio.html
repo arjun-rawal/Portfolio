@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<title> Arjun Rawal | Full stack Java Developer </title>
+<body>
+    <div id="snow"></div>
+
+
+
+    <div id = "all" class = "tabcontent">
+        <div id="particles-js"></div>
+    <link rel="stylesheet" href="portfoliocss.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content = "width=device-width, initial scale = 1.0">
+          
+    <div class="container">
+        <span><p id ="illusion">Arjun Rawal</p></span>
+        <span class="drop"></span>
+    </div>
+        
+    <svg>
+        <defs>
+            <filter id="gooey">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+                <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -20" result="gooey" />
+                <feComposite in="SourceGraphic" in2="gooey" operator="atop" />
+            </filter>
+        </defs>
+    </svg>
+</div>
+    <img class="tabcontent" id ="arrowdown=" src="arrow down.gif" style= "position:absolute;top:600px;height:100px;">
+
+
+</body>
+<div id="testing"style="position:absolute">
+    <p>Who I am</p>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+    script.onload = function(){
+        particlesJS("snow", {
+            "particles": {
+                "number": {
+                    "value": 200,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#00ffff"
+                },
+                "opacity": {
+                    "value": 0.7,
+                    "random": false,
+                    "anim": {
+                        "enable": false
+                    }
+                },
+                "size": {
+                    "value": 5,
+                    "random": true,
+                    "anim": {
+                        "enable": false
+                    }
+                },
+                "line_linked": {
+                    "enable": false
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 5,
+                    "direction": "bottom",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": true,
+                        "rotateX": 300,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": {
+                        "enable": false
+                    },
+                    "onclick": {
+                        "enable": false
+                    },
+                    "resize": false
+                }
+            },
+            "retina_detect": true
+        });
+    }
+    document.head.append(script);
+});
+
+
+
+
+    document.getElementById("testing").style.display="none";
+    document.getElementById("all").addEventListener("wheel", scrollDown);
+
+
+    
+function scrollDown(){
+    document.getElementById("all").style.display = "none";
+    document.getElementById("testing").style.display="block";
+    
+}
+</script>    
+    
+
+
+
+
+    
+</html>
