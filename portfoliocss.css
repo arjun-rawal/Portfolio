@@ -13,7 +13,7 @@ body {
     letter-spacing: 30px;
 	color: rgb(0, 251, 255);
 
-	background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+	background: black;
 	overflow: hidden;
 	filter: drop-shadow(0 0 50px white);
 }
@@ -34,9 +34,7 @@ span {
 	letter-spacing: 20px;
 	font-size: 8rem;
 }
-#illusion{
-	
-}
+
 
 .drop {
 	position: absolute;
