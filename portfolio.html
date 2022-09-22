@@ -2,6 +2,7 @@
 <html lang="en">
 <title> Arjun Rawal | Full stack Java Developer </title>
 <body>
+    <div id = "all" class = "tabcontent">
     <div id="snow"></div>
 
         <input checked id="snowOn"type="checkbox" onclick="toggleSnow()"style="position:absolute;right:2.5%;top:2.5%;transform: scale(2)">
@@ -10,7 +11,7 @@
         <input checked id="lightOn"type="checkbox" onclick="toggleLight()"style="position:absolute;right:2.5%;top:7%;transform: scale(2)">
         <p style="position:absolute;right:4%;top:4.5%;letter-spacing: 1.5px;">Dark Mode</p>
 
-    <div id = "all" class = "tabcontent">
+    
         <div id="particles-js"></div>
     <link rel="stylesheet" href="portfoliocss.css">
     <meta charset="UTF-8">
@@ -31,7 +32,7 @@
         </defs>
     </svg>
 </div>
-    <img class="tabcontent" id ="arrowdown=" src="arrow down.gif" style= "position:absolute;top:600px;height:100px;">
+    <img class="tabcontent" id ="arrowdown" src="arrow down.gif" style= "position:absolute;top:600px;height:100px;">
 
 
 </body>
@@ -141,10 +142,17 @@ document.addEventListener('DOMContentLoaded', function(){
 
     
 function scrollDown(){
-    // document.getElementById("all").style.display = "none";
-    // document.getElementById("testing").style.display="block";
-    
+    document.getElementById("all").style.opacity = 0;
+    document.getElementById("arrowdown").style.opacity = 0;
+    setTimeout(eraseAll, 2000);
+    }
+function eraseAll(){
+    document.getElementById("all").style.display="none";
+    document.getElementById("arrowdown").style.display = "none";
+
 }
+    
+
 </script>    
     
 
