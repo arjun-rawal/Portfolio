@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <title> Arjun Rawal | Full stack Java Developer </title>
-<body>
+<body id ="everything">
     <div id = "all" class = "tabcontent">
     <div id="snow"></div>
 
@@ -10,7 +10,6 @@
 
         <input checked id="lightOn"type="checkbox" onclick="toggleLight()"style="position:absolute;right:2.5%;top:7%;transform: scale(2)">
         <p style="position:absolute;right:4%;top:4.5%;letter-spacing: 1.5px;">Dark Mode</p>
-
     
         <div id="particles-js"></div>
     <link rel="stylesheet" href="portfoliocss.css">
@@ -35,10 +34,15 @@
     <img class="tabcontent" id ="arrowdown" src="arrow down.gif" style= "position:absolute;top:600px;height:100px;">
 
 
-</body>
-<div id="testing"style="position:absolute">
-    <p>Who I am</p>
+
+<div class="fade-in-image"id="page2">
+    <button id ="back"onclick="goHome()"style="position:absolute;left:2.5%;top:2.5%;transform:scale(2);display:none;opacity:0">Home</button>
+
+
 </div>
+
+</body>
+
 
 
 <script>
@@ -136,21 +140,44 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 
-    document.getElementById("testing").style.display="none";
-    document.getElementById("all").addEventListener("wheel", scrollDown);
+    document.getElementById("everything").addEventListener("wheel", scroll);
 
+    var pos = 0;
+function scroll(event){
+    
 
     
-function scrollDown(){
+    //down
+    if (event.deltaY > 0){
+        
     document.getElementById("all").style.opacity = 0;
     document.getElementById("arrowdown").style.opacity = 0;
-    setTimeout(eraseAll, 2000);
+    document.getElementById("back").style.display="block";
+    setTimeout(eraseAll, 1500);
+    
+    
+    }
+
     }
 function eraseAll(){
     document.getElementById("all").style.display="none";
     document.getElementById("arrowdown").style.display = "none";
-
+    document.getElementById("back").style.opacity=1;
 }
+
+function addAll(){
+    document.getElementById("all").style.opacity = 1;
+    document.getElementById("arrowdown").style.opacity = 1;
+    document.getElementById("back").style.display="none";
+    
+}
+function goHome(){
+    document.getElementById("all").style.display="block";
+    document.getElementById("arrowdown").style.display = "block";
+    document.getElementById("back").style.opacity=1;
+    setTimeout(addAll, 500);
+}
+
     
 
 </script>    
