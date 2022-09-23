@@ -143,6 +143,7 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById("everything").addEventListener("wheel", scroll);
 
     var pos = 0;
+    var hbutton;
 function scroll(event){
     
 
@@ -163,6 +164,7 @@ function eraseAll(){
     document.getElementById("all").style.display="none";
     document.getElementById("arrowdown").style.display = "none";
     document.getElementById("back").style.opacity=1;
+    setTimeout(hbutton=true,1500);
 }
 
 function addAll(){
@@ -172,10 +174,18 @@ function addAll(){
     
 }
 function goHome(){
+    if (hbutton){
     document.getElementById("all").style.display="block";
     document.getElementById("arrowdown").style.display = "block";
     document.getElementById("back").style.opacity=1;
     setTimeout(addAll, 500);
+    hbutton = false;
+    }
+    else{
+        document.getElementById("back").innerHTML = "WAIT!";
+        setTimeout(a,1500)
+    }
+    function a(){document.getElementById("back").innerHTML="Home";}
 }
 
     
